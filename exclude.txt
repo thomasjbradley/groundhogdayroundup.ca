@@ -1,0 +1,6 @@
+._*
+.DS_Store
+.hg
+.hgignore
+exclude.txt
+deploy.sh

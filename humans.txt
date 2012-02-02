@@ -1,0 +1,14 @@
+/* TEAM */
+  Designer & Developer: Thomas J Bradley <hey@thomasjbradley.ca>
+  Site: http://thomasjbradley.ca
+  Twitter: @thomasjbradley
+  GitHub: https://github.com/thomasjbradley
+  Location: Ottawa, Canada
+
+/* SITE */
+  Software:
+  - MacVim (and a little TextMate 2)
+  - Git
+
+  Hosting:
+  - WiredTree <http://www.wiredtree.com/>
