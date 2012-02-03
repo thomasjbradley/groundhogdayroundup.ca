@@ -1,6 +1,5 @@
 <?php
-
-$year = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_NUMBER_INT);
+$year = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($year))
   $year = date('Y');
@@ -18,6 +17,7 @@ $text = array(
 if (file_exists($file)) {
   $gophers = json_decode(file_get_contents($file));
 } else {
+  $year = date('Y');
   $gophers = (object) array(
     'billy' => '?'
     , 'willie' => '?'
