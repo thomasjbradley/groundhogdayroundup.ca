@@ -1,6 +1,5 @@
 ._*
 .DS_Store
-.hg
-.hgignore
+.git*
 exclude.txt
 deploy.sh
