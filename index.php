@@ -1,4 +1,5 @@
 <?php
+
 $year = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($year))
@@ -10,7 +11,7 @@ $file = $folder . $year . '.json';
 
 $text = array(
   'shadow' => 'Saw his shadow.'
-  , 'no-shadow' => 'Did’t see his shadow.'
+  , 'no-shadow' => 'Didn’t see his shadow.'
   , '?' => 'Hasn’t woken up yet.'
 );
 
