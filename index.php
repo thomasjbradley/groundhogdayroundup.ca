@@ -10,8 +10,8 @@ $folder = 'years/';
 $file = $folder . $year . '.json';
 
 $text = array(
-  'shadow' => 'Saw his shadow.'
-  , 'no-shadow' => 'Didn’t see his shadow.'
+  'shadow' => 'Saw his shadow—more winter is coming.'
+  , 'no-shadow' => 'Didn’t see his shadow—spring’s on the way.'
   , '' => 'Hasn’t woken up yet.'
 );
 
