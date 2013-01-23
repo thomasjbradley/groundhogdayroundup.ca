@@ -188,44 +188,19 @@ p
 
 [data-state="no-shadow"] .gopher-body
   background-position 0 0
+  transition none
 
-/*
-.gopher:hover .gopher-icon
-  background-position left -200px
+[data-state="no-shadow"]:hover .gopher-body
+[data-state="no-shadow"]:focus .gopher-body
+[data-state="no-shadow"]:active .gopher-body
+  animation gopher-wave 300ms steps(3) 2
+  background-position 0 0
 
-.gopher:hover .ghoper-white
-  background-position -200px -200px
-
-.gopher:hover .gopher-light
-  background-position -400px -200px
-
-.gopher:hover .gopher-grey
-  background-position -600px -200px
-
-.gopher[data-state="shadow"] .gopher-icon
-  background-position left -600px
-
-.gopher[data-state="shadow"] .gopher-white
-  background-position -200px -600px
-
-.gopher[data-state="shadow"] .gopher-light
-  background-position -400px -600px
-
-.gopher[data-state="shadow"] .gopher-grey
-  background-position -600px -600px
-
-.gopher[data-state="no-shadow"] .gopher-icon
-  background-position left -400px
-
-.gopher[data-state="no-shadow"] .gopher-white
-  background-position -200px -400px
-
-.gopher[data-state="no-shadow"] .gopher-light
-  background-position -400px -400px
-
-.gopher[data-state="no-shadow"] .gopher-grey
-  background-position -600px -400px
-  */
+@keyframes gopher-wave
+  0%
+    background-position 0 -152px
+  100%
+    background-position 0 -608px
 
 .thomasjbradley
 .thomasjbradley:link
