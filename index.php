@@ -43,7 +43,7 @@ $themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Groundhog Day Roundup—Feb. 2nd, <?php echo $year; ?>—Canada &amp; United States</title>
+  <title>Groundhog Day Roundup—Feb. 2nd, <?= $year ?>—Canada &amp; United States</title>
   <meta name="keywords" content="groundhog,day,shadow,roundup,canada,united,states,balzac,billie,wiarton,willie,shubenacadie,sam,staten,island,chuck,punxsutawney,phil,general,beauregard,lee">
   <meta name="description" content="A roundup of the Groundhog Day results from across Canada and the United States">
   <meta name="author" content="Thomas J Bradley">
@@ -57,7 +57,7 @@ $themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
 
 <h1 class="logo"><a href="/" class="logo-link"><img class="logo-img" src="/theme/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
 
-<p class="lede">Feb. 2nd, <?php echo $year; ?></p>
+<p class="lede">Feb. 2nd, <?= $year ?></p>
 
 <div class="gopher-group">
 <?php
@@ -83,7 +83,7 @@ $themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
   Other Years:
   <ol class="other-years">
     <?php foreach ($other_years as $other_year) : ?>
-    <li><a href="/<?php echo $other_year; ?>"><?php echo $other_year; ?></a></li>
+    <li><a href="/<?= $other_year ?>"><?= $other_year ?></a></li>
     <?php endforeach; ?>
   </ol>
 </div>
