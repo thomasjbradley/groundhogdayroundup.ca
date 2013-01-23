@@ -118,22 +118,28 @@ p
   text-align center
 
 .gopher-icon
-  height 170px
+  height 204px
   left 50%
   margin 0 0 0 -100px
   overflow hidden
   position absolute
-  top 0
+  top -4px
   width 200px
 
 .gopher-ground
-  height 50px
+  height 82px
   padding 0
   position absolute
   top 120px
   width 200px
 
   background transparent url("/theme/img/ground.svg") no-repeat 0 0
+
+[data-state="shadow"] .gopher-ground
+  background-position -400px 0
+
+[data-state="no-shadow"] .gopher-ground
+  background-position -200px 0
 
 .gopher-body
   height 152px
@@ -142,7 +148,7 @@ p
   width 800px
   // z-index 100
 
-  background transparent url("/theme/img/body.svg") no-repeat 0 130px
+  background transparent url("/theme/img/body-no-shadow.svg") no-repeat 0 130px
   transition background-position 250ms ease-out
 
   text-indent -999em
@@ -160,6 +166,13 @@ p
 
 .gopher-grey
   left -600px
+
+[data-state="shadow"] .gopher-body
+  background-image url("/theme/img/body-shadow.svg")
+  background-position 0 0
+
+[data-state="no-shadow"] .gopher-body
+  background-position 0 0
 
 /*
 .gopher:hover .gopher-icon
