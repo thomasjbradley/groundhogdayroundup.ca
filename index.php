@@ -46,12 +46,15 @@ foreach ($di as $other_year) {
   <meta name="description" content="A roundup of the Groundhog Day results from across Canada and the United States">
   <meta name="author" content="Thomas J Bradley">
   <meta name="copyright" content="Thomas J Bradley">
-  <link rel="stylesheet" href="/theme/css/theme.css" type="text/css">
+  <link href="/theme/css/theme.css" rel="stylesheet">
   <meta name="viewport" content="width=960">
 </head>
 <body>
+
 <h1><a href="/"><img src="/theme/img/logo.png" width="475" height="125" alt="Groundhog Day Roundup"></a></h1>
+
 <p class="intro">Feb. 2nd, <?php echo $year; ?></p>
+
 <div>
 <?php
   if ($domain == 'ca') {
@@ -61,6 +64,7 @@ foreach ($di as $other_year) {
   }
 ?>
 </div>
+
 <div>
 <?php
   if ($domain == 'ca') {
@@ -70,6 +74,7 @@ foreach ($di as $other_year) {
   }
 ?>
 </div>
+
 <div class="other-years-wrap">
   Other Years:
   <ol class="other-years">
@@ -78,12 +83,15 @@ foreach ($di as $other_year) {
   <?php endforeach; ?>
   </ol>
 </div>
+
 <a href="http://thomasjbradley.ca" rel="external" class="thomasjbradley" title="Designed and Developed by Thomas J Bradley">Thomas J Bradley</a>
+
 <script>
   var _gaq=[['_setAccount','UA-561679-4'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
+
 </body>
 </html>

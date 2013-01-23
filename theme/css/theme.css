@@ -1,8 +1,13 @@
 @font-face {
-  font-family: "LeagueGothic";
-  src: url("/theme/fonts/League_Gothic.eot");
-  src: local("League Gothic Regular"), local("LeagueGothic"), url("/theme/fonts/League_Gothic.woff") format("woff"), url("/theme/fonts/League_Gothic.ttf") format("truetype"), url("/theme/fonts/League_Gothic.svg#LeagueGothic") format("svg");
-  }
+  font-family: 'LeagueGothic';
+  src: url('/theme/fonts/league-gothic.eot');
+  src: url('/theme/fonts/league-gothic.eot?#iefix') format('embedded-opentype'),
+       url('/theme/fonts/league-gothic.woff') format('woff'),
+       url('/theme/fonts/league-gothic.ttf') format('truetype'),
+       url('/theme/fonts/league-gothic.svg#LeagueGothicRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
   margin: 0;
