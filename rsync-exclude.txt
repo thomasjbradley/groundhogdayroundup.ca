@@ -1,5 +1,6 @@
 ._*
 .DS_Store
 .git*
-exclude.txt
+rsync-exclude.txt
 deploy.sh
+*.styl
