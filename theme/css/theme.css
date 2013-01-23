@@ -43,17 +43,6 @@ h1 {
   text-align: center;
   }
 
-div {
-  clear: both;
-  margin: 1.375em auto 2.75em;
-  overflow: hidden;
-  padding: 0 0 6em;
-  position: relative;
-  width: 810px;
-
-  border-bottom: 1px solid #878176;
-  }
-
 h2 {
   bottom: 0.5em;
   margin: 0;
@@ -73,100 +62,6 @@ h2 a:visited {
   text-decoration: none;
   }
 
-ul {
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-  }
-
-ul li {
-  display: inline;
-  float: left;
-  margin: 10px 10px 1.375em;
-  padding: 200px 0 0;
-  position: relative;
-  width: 250px;
-
-  text-align: center;
-  }
-
-li span {
-  display: block;
-  height: 200px;
-  left: 25px;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  width: 200px;
-
-  background: transparent url("/theme/img/groundhogs.png") no-repeat left top;
-
-  text-indent: -999em;
-  }
-
-li span.white {
-  background-position: -200px top;
-  }
-
-li span.light {
-  background-position: -400px top;
-  }
-
-li span.grey {
-  background-position: -600px top;
-  }
-
-li:hover span {
-  background-position: left -200px;
-  }
-
-li:hover span.white {
-  background-position: -200px -200px;
-  }
-
-li:hover span.light {
-  background-position: -400px -200px;
-  }
-
-li:hover span.grey {
-  background-position: -600px -200px;
-  }
-
-li.shadow span {
-  background-position: left -600px;
-  }
-
-li.shadow span.white {
-  background-position: -200px -600px;
-  }
-
-li.shadow span.light {
-  background-position: -400px -600px;
-  }
-
-li.shadow span.grey {
-  background-position: -600px -600px;
-  }
-
-li.no-shadow span {
-  background-position: left -400px;
-  }
-
-li.no-shadow span.white {
-  background-position: -200px -400px;
-  }
-
-li.no-shadow span.light {
-  background-position: -400px -400px;
-  }
-
-li.no-shadow span.grey {
-  background-position: -600px -400px;
-  }
-
 h3 {
   margin: 0;
   padding: 0;
@@ -183,7 +78,120 @@ p {
   font: italic normal 1em Georgia,sans-serif;
   }
 
-p.intro {
+.logo {
+
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.gopher-group {
+  clear: both;
+  margin: 1.375em auto 2.75em;
+  overflow: hidden;
+  padding: 0 0 6em;
+  position: relative;
+  width: 810px;
+
+  border-bottom: 1px solid #878176;
+  }
+
+.gopher-list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+  }
+
+.gopher {
+  display: inline;
+  float: left;
+  margin: 10px 10px 1.375em;
+  padding: 200px 0 0;
+  position: relative;
+  width: 250px;
+
+  text-align: center;
+  }
+
+.gopher-icon {
+  display: block;
+  height: 200px;
+  left: 25px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+
+  background: transparent url("/theme/img/groundhogs.png") no-repeat left top;
+
+  text-indent: -999em;
+  }
+
+.gopher-white {
+  background-position: -200px top;
+  }
+
+.gopher-light {
+  background-position: -400px top;
+  }
+
+.gopher-grey {
+  background-position: -600px top;
+  }
+
+.gopher:hover .gopher-icon {
+  background-position: left -200px;
+  }
+
+.gopher:hover .ghoper-white{
+  background-position: -200px -200px;
+  }
+
+.gopher:hover .gopher-light {
+  background-position: -400px -200px;
+  }
+
+.gopher:hover .gopher-grey {
+  background-position: -600px -200px;
+  }
+
+.gopher[data-state="shadow"] .gopher-icon {
+  background-position: left -600px;
+  }
+
+.gopher[data-state="shadow"] .gopher-white {
+  background-position: -200px -600px;
+  }
+
+.gopher[data-state="shadow"] .gopher-light {
+  background-position: -400px -600px;
+  }
+
+.gopher[data-state="shadow"] .gopher-grey {
+  background-position: -600px -600px;
+  }
+
+.gopher[data-state="no-shadow"] .gopher-icon {
+  background-position: left -400px;
+  }
+
+.gopher[data-state="no-shadow"] .gopher-white {
+  background-position: -200px -400px;
+  }
+
+.gopher[data-state="no-shadow"] .gopher-light {
+  background-position: -400px -400px;
+  }
+
+.gopher[data-state="no-shadow"] .gopher-grey {
+  background-position: -600px -400px;
+  }
+
+.lede {
   margin: 1.375em 0 0;
   padding: 0;
 
@@ -192,9 +200,9 @@ p.intro {
   text-align: center;
   }
 
-a.thomasjbradley,
-a.thomasjbradley:link,
-a.thomasjbradley:visited {
+.thomasjbradley,
+.thomasjbradley:link,
+.thomasjbradley:visited {
   display: block;
   height: 31px;
   margin: -1.375em auto 1.375em;
@@ -207,9 +215,9 @@ a.thomasjbradley:visited {
   text-indent: -999em;
   }
 
-a.thomasjbradley:focus,
-a.thomasjbradley:hover,
-a.thomasjbradley:active {
+.thomasjbradley:focus,
+.thomasjbradley:hover,
+.thomasjbradley:active {
   background-position: right top;
   }
 

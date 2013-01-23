@@ -12,7 +12,7 @@ $file = $folder . $year . '.json';
 $text = array(
   'shadow' => 'Saw his shadow.'
   , 'no-shadow' => 'Didn’t see his shadow.'
-  , '?' => 'Hasn’t woken up yet.'
+  , '' => 'Hasn’t woken up yet.'
 );
 
 if (file_exists($file)) {
@@ -20,12 +20,12 @@ if (file_exists($file)) {
 } else {
   $year = date('Y');
   $gophers = (object) array(
-    'billy' => '?'
-    , 'willie' => '?'
-    , 'sam' => '?'
-    , 'chuck' => '?'
-    , 'phil' => '?'
-    , 'lee' => '?'
+    'billy' => ''
+    , 'willie' => ''
+    , 'sam' => ''
+    , 'chuck' => ''
+    , 'phil' => ''
+    , 'lee' => ''
   );
 }
 
@@ -51,11 +51,11 @@ foreach ($di as $other_year) {
 </head>
 <body>
 
-<h1><a href="/"><img src="/theme/img/logo.png" width="475" height="125" alt="Groundhog Day Roundup"></a></h1>
+<h1 class="logo"><a href="/" class="logo-link"><img src="/theme/img/logo.png" alt="Groundhog Day Roundup"></a></h1>
 
-<p class="intro">Feb. 2nd, <?php echo $year; ?></p>
+<p class="lede">Feb. 2nd, <?php echo $year; ?></p>
 
-<div>
+<div class="gopher-group">
 <?php
   if ($domain == 'ca') {
     require_once 'theme/inc/ca.php';
@@ -65,7 +65,7 @@ foreach ($di as $other_year) {
 ?>
 </div>
 
-<div>
+<div class="gopher-group">
 <?php
   if ($domain == 'ca') {
     require_once 'theme/inc/us.php';
@@ -78,9 +78,9 @@ foreach ($di as $other_year) {
 <div class="other-years-wrap">
   Other Years:
   <ol class="other-years">
-  <?php foreach ($other_years as $other_year) : ?>
-  <li><a href="/<?php echo $other_year; ?>"><?php echo $other_year; ?></a></li>
-  <?php endforeach; ?>
+    <?php foreach ($other_years as $other_year) : ?>
+    <li><a href="/<?php echo $other_year; ?>"><?php echo $other_year; ?></a></li>
+    <?php endforeach; ?>
   </ol>
 </div>
 
