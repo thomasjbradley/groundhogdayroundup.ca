@@ -47,11 +47,13 @@ foreach ($di as $other_year) {
   <meta name="author" content="Thomas J Bradley">
   <meta name="copyright" content="Thomas J Bradley">
   <link href="/theme/css/theme.css" rel="stylesheet">
-  <meta name="viewport" content="width=960">
+  <meta name="handheldfriendly" content="true">
+  <meta name="mobileoptimized" content="240">
+  <meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi">
 </head>
 <body>
 
-<h1 class="logo"><a href="/" class="logo-link"><img src="/theme/img/logo.png" alt="Groundhog Day Roundup"></a></h1>
+<h1 class="logo"><a href="/" class="logo-link"><img src="/theme/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
 
 <p class="lede">Feb. 2nd, <?php echo $year; ?></p>
 
