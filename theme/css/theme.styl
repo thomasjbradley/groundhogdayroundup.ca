@@ -81,6 +81,16 @@ p
   display block
   width 100%
 
+.lede
+  margin 0 0 0.75em
+  padding 0 0 0.75em
+
+  border-bottom 1px solid #878176
+
+  color #fff
+  font normal 3em/1 "LeagueGothic", sans-serif
+  text-align center
+
 .gopher-group
   clear both
   margin 2.3em auto
@@ -108,29 +118,48 @@ p
   text-align center
 
 .gopher-icon
-  display block
-  height 200px
-  left 15px
-  margin 0
+  height 170px
+  left 50%
+  margin 0 0 0 -100px
   overflow hidden
-  padding 0
   position absolute
   top 0
   width 200px
 
-  background transparent url("/theme/img/groundhogs.png") no-repeat left top
+.gopher-ground
+  height 50px
+  padding 0
+  position absolute
+  top 120px
+  width 200px
+
+  background transparent url("/theme/img/ground.svg") no-repeat 0 0
+
+.gopher-body
+  height 152px
+  overflow hidden
+  position absolute
+  width 800px
+  // z-index 100
+
+  background transparent url("/theme/img/body.svg") no-repeat 0 130px
+  transition background-position 250ms ease-out
 
   text-indent -999em
 
+.gopher:hover .gopher-body
+  background-position 0 100px
+
 .gopher-white
-  background-position -200px top
+  left -200px
 
 .gopher-light
-  background-position -400px top
+  left -400px
 
 .gopher-grey
-  background-position -600px top
+  left -600px
 
+/*
 .gopher:hover .gopher-icon
   background-position left -200px
 
@@ -166,16 +195,7 @@ p
 
 .gopher[data-state="no-shadow"] .gopher-grey
   background-position -600px -400px
-
-.lede
-  margin 0 0 0.75em
-  padding 0 0 0.75em
-
-  border-bottom 1px solid #878176
-
-  color #fff
-  font normal 3em/1 "LeagueGothic", sans-serif
-  text-align center
+  */
 
 .thomasjbradley
 .thomasjbradley:link
