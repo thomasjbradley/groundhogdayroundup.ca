@@ -37,6 +37,8 @@ foreach ($di as $other_year) {
     $other_years[] = str_replace('.json', '', $other_year->getFilename());
 }
 
+$themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
+
 ?><!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -46,7 +48,7 @@ foreach ($di as $other_year) {
   <meta name="description" content="A roundup of the Groundhog Day results from across Canada and the United States">
   <meta name="author" content="Thomas J Bradley">
   <meta name="copyright" content="Thomas J Bradley">
-  <link href="/theme/css/theme.css" rel="stylesheet">
+  <link href="/theme/css/<?= $themeCss ?>" rel="stylesheet">
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi">
