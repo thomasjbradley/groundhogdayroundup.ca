@@ -1,6 +1,6 @@
 <h2>United States</h2>
 <ul class="gopher-list">
-  <li class="gopher" data-state="<?= $gophers->chuck ?>">
+  <li class="gopher" data-state="<?= $gophers->chuck ?>" tabindex="0">
     <h3 class="gopher-name">Staten Island Chuck</h3>
     <p class="gopher-location">Staten Island, New York</p>
     <div class="gopher-icon">
@@ -8,7 +8,7 @@
       <div class="gopher-ground"></div>
     </div>
   </li>
-  <li class="gopher" data-state="<?= $gophers->phil ?>">
+  <li class="gopher" data-state="<?= $gophers->phil ?>" tabindex="0">
     <h3 class="gopher-name">Punxsutawney Phil</h3>
     <p class="gopher-location">Punxsutawney, Pennsylvania</p>
     <div class="gopher-icon">
@@ -16,7 +16,7 @@
       <div class="gopher-ground"></div>
     </div>
   </li>
-  <li class="gopher" data-state="<?= $gophers->lee ?>">
+  <li class="gopher" data-state="<?= $gophers->lee ?>" tabindex="0">
     <h3 class="gopher-name">General Beauregard Lee</h3>
     <p class="gopher-location">Lilburn, Georgia</p>
     <div class="gopher-icon">
