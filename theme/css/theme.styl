@@ -127,6 +127,7 @@ p
   width 200px
 
 .gopher-ground
+.gopher-shadow
   height 82px
   padding 0
   position absolute
@@ -135,18 +136,27 @@ p
 
   background transparent url("/theme/img/ground.svg") no-repeat 0 0
 
+.gopher-shadow
+  display none
+
+  background-image url("/theme/img/shadow.svg")
+
+  transition opacity 250ms ease-out
+
 [data-state="shadow"] .gopher-ground
   background-position -400px 0
 
 [data-state="no-shadow"] .gopher-ground
   background-position -200px 0
 
+[data-state="shadow"] .gopher-shadow
+  display block
+
 .gopher-body
   height 152px
   overflow hidden
   position absolute
   width 800px
-  // z-index 100
 
   background transparent url("/theme/img/body-no-shadow.svg") no-repeat 0 130px
   transition background-position 250ms ease-out
@@ -157,6 +167,11 @@ p
 .gopher:focus .gopher-body
 .gopher:active .gopher-body
   background-position 0 108px
+
+.gopher:hover .gopher-shadow
+.gopher:focus .gopher-shadow
+.gopher:active .gopher-shadow
+  opacity 0
 
 .gopher-white
   left -200px

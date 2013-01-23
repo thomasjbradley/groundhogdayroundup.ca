@@ -6,6 +6,7 @@
     <div class="gopher-icon">
       <div class="gopher-body gopher-light"><?= $text[$gophers->chuck] ?></div>
       <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
     </div>
   </li>
   <li class="gopher" data-state="<?= $gophers->phil ?>" tabindex="0">
@@ -14,6 +15,7 @@
     <div class="gopher-icon">
       <div class="gopher-body gopher-brown"><?= $text[$gophers->phil] ?></div>
       <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
     </div>
   </li>
   <li class="gopher" data-state="<?= $gophers->lee ?>" tabindex="0">
@@ -22,6 +24,7 @@
     <div class="gopher-icon">
       <div class="gopher-body gopher-grey"><?= $text[$gophers->lee] ?></div>
       <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
     </div>
   </li>
 </ul>
