@@ -1,9 +1,14 @@
+@import 'nib'
+
 @font-face
   font-family 'LeagueGothic'
   src url('/theme/fonts/league-gothic.eot')
   src url('/theme/fonts/league-gothic.eot?#iefix') format('embedded-opentype'), url('/theme/fonts/league-gothic.woff') format('woff'), url('/theme/fonts/league-gothic.ttf') format('truetype'), url('/theme/fonts/league-gothic.svg#LeagueGothicRegular') format('svg')
   font-weight normal
   font-style normal
+
+*
+  box-sizing border-box
 
 html
   margin 0
@@ -12,8 +17,10 @@ html
   background #5b554b url("/theme/img/bg.jpg") no-repeat center top
 
 body
-  margin 0
-  padding 0
+  margin 0 auto
+  min-width 240px
+  max-width 52em
+  padding 0 10px
 
   color #fff
   font normal 100.01%/1.375 sans-serif
@@ -30,16 +37,15 @@ a:visited
   color #fff
 
 h1
+  margin 0.75em 0
+
   color #ebe8c5
   font normal 3em/1 "LeagueGothic", sans-serif
   text-align center
 
 h2
-  bottom 0.5em
-  margin 0
+  margin 0 0 1em
   padding 0
-  position absolute
-  width 100%
 
   color #ebe8c5
   font normal 3em/1 "LeagueGothic", sans-serif
@@ -66,38 +72,45 @@ p
   font italic normal 1em Georgia,sans-serif
 
 .logo-link
-  display inline-block
+  display block
+  margin 0 auto
+  max-width 475px
+  width 100%
+
+.logo-img
+  display block
+  width 100%
 
 .gopher-group
   clear both
-  margin 1.375em auto 2.75em
+  margin 2.3em auto
   overflow hidden
-  padding 0 0 6em
+  padding 0
   position relative
-  width 810px
 
   border-bottom 1px solid #878176
 
 .gopher-list
-  margin 0
+  margin 0 -10px
   padding 0
 
   list-style-type none
 
+  text-align center
+
 .gopher
-  display inline
-  float left
-  margin 10px 10px 1.375em
-  padding 200px 0 0
+  display inline-block
+  margin 0 0 3em
+  min-width 220px
+  padding 200px 10px 0
   position relative
-  width 250px
 
   text-align center
 
 .gopher-icon
   display block
   height 200px
-  left 25px
+  left 15px
   margin 0
   overflow hidden
   padding 0
@@ -155,8 +168,10 @@ p
   background-position -600px -400px
 
 .lede
-  margin 1.375em 0 0
-  padding 0
+  margin 0 0 0.75em
+  padding 0 0 0.75em
+
+  border-bottom 1px solid #878176
 
   color #fff
   font normal 3em/1 "LeagueGothic", sans-serif

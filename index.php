@@ -53,7 +53,7 @@ foreach ($di as $other_year) {
 </head>
 <body>
 
-<h1 class="logo"><a href="/" class="logo-link"><img src="/theme/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
+<h1 class="logo"><a href="/" class="logo-link"><img class="logo-img" src="/theme/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
 
 <p class="lede">Feb. 2nd, <?php echo $year; ?></p>
 
