@@ -38,6 +38,10 @@ a:link
 a:visited
   color #fff
 
+a:focus
+a:active
+  outline 3px solid rgba(40,40,40,0.7)
+
 h1
   margin 0.75em 0
 
@@ -80,6 +84,7 @@ p
   display block
   margin 0 auto
   max-width 475px
+  padding 2px 6px
   width 100%
 
 .logo-img
@@ -117,18 +122,34 @@ p
   display inline-block
   margin 0 0 3em
   min-width 220px
-  padding 200px 10px 0
+  padding 200px 10px 4px
   position relative
 
   text-align center
 
+.gopher:focus
+.gopher:active
+  outline none
+
+.gopher:focus:after
+.gopher:active:after
+  bottom -1.2em
+  height 1em
+  left 50%
+  margin-left -0.5em
+  position absolute
+  width 1em
+
+  content "▲"
+  color rgba(40,40,40,0.7)
+
 .gopher-icon
-  height 204px
+  height 200px
   left 50%
   margin 0 0 0 -100px
   overflow hidden
   position absolute
-  top -4px
+  top 0
   width 200px
 
 .gopher-ground
@@ -245,8 +266,8 @@ p
 
   text-indent -999em
 
-.thomasjbradley:focus
 .thomasjbradley:hover
+.thomasjbradley:focus
 .thomasjbradley:active
   background-position right top
 
