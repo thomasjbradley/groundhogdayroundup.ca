@@ -37,7 +37,8 @@ foreach ($di as $other_year) {
     $other_years[] = str_replace('.json', '', $other_year->getFilename());
 }
 
-$themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
+$glob = glob(__DIR__ . '/theme/css/theme*.css');
+$themeCss = basename($glob[0]);
 
 ?><!DOCTYPE html>
 <html lang="en-ca">
