@@ -3,18 +3,10 @@
 define('YEARS_DIR', __DIR__ . '/years');
 define('YEAR_FILE_EXT', '.json');
 define('YEAR_FILE', YEARS_DIR . '/%s' . YEAR_FILE_EXT);
+define('DEFAULT_GOPHER_LIST', YEARS_DIR . '/default.json');
 
 function createNewGopherList () {
-  $gophers = (object) array(
-    'billy' => 'still-hibernating'
-    , 'willie' => 'still-hibernating'
-    , 'sam' => 'still-hibernating'
-    , 'chuck' => 'still-hibernating'
-    , 'phil' => 'still-hibernating'
-    , 'lee' => 'still-hibernating'
-  );
-
-  return $gophers;
+  return json_decode(file_get_contents(DEFAULT_GOPHER_LIST));
 }
 
 function getYear () {
@@ -41,9 +33,12 @@ function getYearData ($year) {
 function getAllYears () {
   $other_years = array();
   $di = new DirectoryIterator(YEARS_DIR);
+  $ignore = array(
+    basename(DEFAULT_GOPHER_LIST)
+  );
 
   foreach ($di as $other_year) {
-    if ($other_year->isFile())
+    if ($other_year->isFile() && !in_array($other_year->getFilename(), $ignore))
       $other_years[] = str_replace(YEAR_FILE_EXT, '', $other_year->getFilename());
   }
 
