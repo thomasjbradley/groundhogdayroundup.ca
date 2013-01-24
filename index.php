@@ -1,41 +1,17 @@
 <?php
 
-$year = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_NUMBER_INT);
-
-if (empty($year))
-  $year = date('Y');
-
-$domain = (stripos($_SERVER['HTTP_HOST'], '.ca') !== false) ? 'ca' : 'us';
-$folder = 'years/';
-$file = $folder . $year . '.json';
+require_once 'utils.php';
 
 $text = array(
   'shadow' => 'Saw his shadow—more winter is coming.'
   , 'no-shadow' => 'Didn’t see his shadow—spring’s on the way.'
-  , '' => 'Hasn’t woken up yet.'
+  , 'still-hibernating' => 'Hasn’t woken up yet.'
 );
 
-if (file_exists($file)) {
-  $gophers = json_decode(file_get_contents($file));
-} else {
-  $year = date('Y');
-  $gophers = (object) array(
-    'billy' => ''
-    , 'willie' => ''
-    , 'sam' => ''
-    , 'chuck' => ''
-    , 'phil' => ''
-    , 'lee' => ''
-  );
-}
-
-$other_years = array();
-$di = new DirectoryIterator($folder);
-
-foreach ($di as $other_year) {
-  if ($other_year->isFile())
-    $other_years[] = str_replace('.json', '', $other_year->getFilename());
-}
+$domain = (stripos($_SERVER['HTTP_HOST'], '.ca') !== false) ? 'ca' : 'us';
+$year = getYear();
+$gophers = getYearData($year);
+$other_years = getAllYears();
 
 $glob = glob(__DIR__ . '/theme/css/theme*.css');
 $themeCss = basename($glob[0]);
