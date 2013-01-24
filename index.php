@@ -66,7 +66,7 @@ $themeCss = basename($glob[0]);
   </ol>
 </div>
 
-<a href="http://thomasjbradley.ca" rel="external" class="thomasjbradley" title="Designed and Developed by Thomas J Bradley">Thomas J Bradley</a>
+<a href="http://thomasjbradley.ca" rel="external" class="thomasjbradley" title="Designed and developed by Thomas J Bradley">Thomas J Bradley</a>
 
 <script>
   Modernizr.load({
