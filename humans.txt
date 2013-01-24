@@ -7,8 +7,12 @@
 
 /* SITE */
   Software:
-  - MacVim (and a little TextMate 2)
+  - Sublime Text
   - Git
+  - Kaleidoscope
+  - Adobe Illustrator
+  - SVGO
+  - ImageOptim
 
   Hosting:
   - WiredTree <http://www.wiredtree.com/>
