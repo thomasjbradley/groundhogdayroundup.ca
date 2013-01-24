@@ -92,6 +92,11 @@ $themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
 <a href="http://thomasjbradley.ca" rel="external" class="thomasjbradley" title="Designed and Developed by Thomas J Bradley">Thomas J Bradley</a>
 
 <script>
+  Modernizr.load({
+    test: Modernizr.inlinesvg
+    , nope: ['/theme/css/no-svg.css']
+  });
+
   if (Modernizr.cssanimations) {
     document.body.className += ' js-gopher-animations';
 
@@ -102,6 +107,26 @@ $themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
     setTimeout(function () {
       document.body.className += ' js-gopher-shadow-start';
     }, 400);
+
+    var gophers = document.getElementsByClassName('gopher')
+
+    for (var i = 0, t = gophers.length; i < t; i++) {
+      gophers[i].addEventListener('touchstart', function (e) {
+        this.focus();
+      }, false);
+    }
+  }
+
+  if (!Modernizr.inlinesvg) {
+    ;(function () {
+      var imgs = document.getElementsByTagName('img')
+        , totalImgs = imgs.length
+        , i = 0
+
+        for (i = 0; i < totalImgs; i++) {
+          imgs[i].src = imgs[i].src.replace(/svg$/, 'png')
+        }
+    }())
   }
 
   var _gaq=[['_setAccount','UA-561679-4'],['_trackPageview']];

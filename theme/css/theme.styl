@@ -83,9 +83,11 @@ p
 .logo-link
   display block
   margin 0 auto
-  max-width 475px
+  max-width 500px
   padding 2px 6px
   width 100%
+
+  text-align center
 
 .logo-img
   display block
@@ -195,16 +197,6 @@ p
 
   text-indent -999em
 
-.gopher:hover .gopher-body
-.gopher:focus .gopher-body
-.gopher:active .gopher-body
-  background-position 0 108px
-
-.gopher:hover .gopher-shadow
-.gopher:focus .gopher-shadow
-.gopher:active .gopher-shadow
-  opacity 0
-
 .gopher-white
   left -200px
 
@@ -219,6 +211,24 @@ p
   background-position 0 0
 
 [data-state="no-shadow"] .gopher-body
+  background-position 0 0
+
+.gopher:hover .gopher-body
+.gopher:focus .gopher-body
+.gopher:active .gopher-body
+.cssanimations [data-state="shadow"]:hover .gopher-body
+.cssanimations [data-state="shadow"]:focus .gopher-body
+.cssanimations [data-state="shadow"]:active .gopher-body
+  background-position 0 108px
+
+.cssanimations .gopher:hover .gopher-shadow
+.cssanimations .gopher:focus .gopher-shadow
+.cssanimations .gopher:active .gopher-shadow
+  opacity 0
+
+[data-state="shadow"]:hover .gopher-body
+[data-state="shadow"]:focus .gopher-body
+[data-state="shadow"]:active .gopher-body
   background-position 0 0
 
 .cssanimations [data-state="no-shadow"] .gopher-body
