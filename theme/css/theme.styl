@@ -1,5 +1,7 @@
 @import 'nib'
 
+support-for-ie = false
+
 @font-face
   font-family 'LeagueGothic'
   src url('/theme/fonts/league-gothic.eot')
@@ -71,6 +73,9 @@ p
   color #ccc
   font italic normal 1em Georgia,sans-serif
 
+.logo
+  margin 0.75em 0 0.5em
+
 .logo-link
   display block
   margin 0 auto
@@ -141,8 +146,6 @@ p
 
   background-image url("/theme/img/shadow.svg")
 
-  transition opacity 250ms ease-out
-
 [data-state="shadow"] .gopher-ground
   background-position -400px 0
 
@@ -152,6 +155,14 @@ p
 [data-state="shadow"] .gopher-shadow
   display block
 
+  transition opacity 300ms ease-out
+
+.cssanimations .gopher-shadow
+  opacity 0
+
+.js-gopher-shadow-start .gopher-shadow
+  opacity 1
+
 .gopher-body
   height 152px
   overflow hidden
@@ -159,7 +170,7 @@ p
   width 800px
 
   background transparent url("/theme/img/body-no-shadow.svg") no-repeat 0 130px
-  transition background-position 250ms ease-out
+  transition background-position 300ms ease-out
 
   text-indent -999em
 
@@ -188,7 +199,19 @@ p
 
 [data-state="no-shadow"] .gopher-body
   background-position 0 0
+
+.cssanimations [data-state="no-shadow"] .gopher-body
   transition none
+
+.js-gopher-animations .gopher-body
+  background-position 0 108px
+
+.js-gopher-animations [data-state="shadow"] .gopher-body
+  animation gopher-popup 300ms 400ms 1 forwards
+  transition none
+
+.js-gopher-animations [data-state="no-shadow"] .gopher-body
+  animation gopher-popup 300ms 300ms 1 forwards
 
 [data-state="no-shadow"]:hover .gopher-body
 [data-state="no-shadow"]:focus .gopher-body
@@ -201,6 +224,12 @@ p
     background-position 0 -152px
   100%
     background-position 0 -608px
+
+@keyframes gopher-popup
+  0%
+    background-position 0 108px
+  100%
+    background-position 0 0
 
 .thomasjbradley
 .thomasjbradley:link

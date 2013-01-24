@@ -52,6 +52,7 @@ $themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi">
+  <script src="/theme/js/modernizr.min.js"></script>
 </head>
 <body>
 
@@ -91,6 +92,18 @@ $themeCss = basename(glob(__DIR__ . '/theme/css/theme*.css')[0]);
 <a href="http://thomasjbradley.ca" rel="external" class="thomasjbradley" title="Designed and Developed by Thomas J Bradley">Thomas J Bradley</a>
 
 <script>
+  if (Modernizr.cssanimations) {
+    document.body.className += ' js-gopher-animations';
+
+    setTimeout(function () {
+      document.body.className = document.body.className.replace(/js-gopher-animations/, '');
+    }, 700);
+
+    setTimeout(function () {
+      document.body.className += ' js-gopher-shadow-start';
+    }, 400);
+  }
+
   var _gaq=[['_setAccount','UA-561679-4'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
