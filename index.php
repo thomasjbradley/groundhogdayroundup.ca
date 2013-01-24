@@ -10,7 +10,7 @@ $text = array(
 
 $domain = (stripos($_SERVER['HTTP_HOST'], '.ca') !== false) ? 'ca' : 'us';
 $year = getYear();
-$gophers = getYearData($year);
+$gophers = getGopherList($year);
 $other_years = getAllYears();
 
 $glob = glob(__DIR__ . '/theme/css/theme*.css');
