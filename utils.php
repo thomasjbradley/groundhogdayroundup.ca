@@ -34,6 +34,8 @@ function getAllYears () {
       $other_years[] = str_replace(YEAR_FILE_EXT, '', $other_year->getFilename());
   }
 
+  natsort($other_years);
+
   return $other_years;
 }
 
