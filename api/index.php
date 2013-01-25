@@ -13,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'GET') {
 
 if (!empty($request)) {
   $year = getYear();
-  echo json_encode(getGopherList($year), JSON_UNESCAPED_SLASHES);
+  // echo json_encode(getGopherList($year), JSON_UNESCAPED_SLASHES);
+  echo stripslashes(json_encode(getGopherList($year)));
 } else {
   $years = getAllYears();
   $yearsJson = array();
@@ -22,5 +23,6 @@ if (!empty($request)) {
     $yearsJson[] = $host . $year;
   }
 
-  echo json_encode($yearsJson, JSON_UNESCAPED_SLASHES);
+  // echo json_encode($yearsJson, JSON_UNESCAPED_SLASHES);
+  echo stripslashes(json_encode($yearsJson));
 }
