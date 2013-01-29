@@ -69,6 +69,10 @@ $themeCss = basename($glob[0]);
   </ol>
 </div>
 
+<div class="social">
+  <a href="http://twitter.com/ghogdayroundup" rel="external"><i class="icon i-twitter"></i>@ghogdayroundup</a>
+</div>
+
 <a href="http://thomasjbradley.ca" rel="external" class="thomasjbradley" title="Designed and developed by Thomas J Bradley">Thomas J Bradley</a>
 
 <script>
