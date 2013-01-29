@@ -24,17 +24,21 @@ $themeCss = basename($glob[0]);
   <meta name="description" content="A roundup of the <?=$year?> Groundhog Day results from across Canada and the United States.">
   <meta name="author" content="Thomas J Bradley">
   <meta name="copyright" content="Thomas J Bradley">
+  <link rel="author" content="https://plus.google.com/112719250789350308611">
   <link href="/theme/css/<?=$themeCss?>" rel="stylesheet">
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi">
   <script src="/theme/js/modernizr.min.js"></script>
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Event">
+
+<meta itemprop="name" content="Groundhog Day, <?=$year?>">
+<meta itempropproperty="description" content="A roundup of the <?=$year?> Groundhog Day results from across Canada and the United States.">
 
 <h1 class="logo"><a href="/" class="logo-link"><img class="logo-img" src="/theme/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
 
-<p class="lede"><time datetime="<?=$year?>-02-02">Feb. 2nd, <?=$year?></time></p>
+<p class="lede"><time itemprop="startDate" datetime="<?=$year?>-02-02">Feb. 2nd, <?=$year?></time></p>
 
 <div class="gopher-group">
 <?php
