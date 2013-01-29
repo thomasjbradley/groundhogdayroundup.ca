@@ -6,6 +6,14 @@ define('YEAR_FILE', YEARS_DIR . '/%s' . YEAR_FILE_EXT);
 define('DEFAULT_GOPHER_LIST', YEARS_DIR . '/default.json');
 
 /**
+ * Gets the current country: ca or us
+ * @return string
+ */
+function getCountry () {
+  return (stripos($_SERVER['HTTP_HOST'], '.ca') !== false) ? 'ca' : 'us';
+}
+
+/**
  * Reads the URL or defaults to this year
  * @return string
  */
