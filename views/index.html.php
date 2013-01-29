@@ -8,7 +8,8 @@ $text = array(
 
 $country = getCountry();
 $year = getYear();
-$gophers = getGopherList($year);
+$gophers = json_decode(file_get_contents(__DIR__ . '/../gophers.json'));
+$gophers_data = getGopherList($year);
 $other_years = getAllYears();
 
 $glob = glob(__DIR__ . '/../theme/css/theme*.css');
@@ -18,12 +19,12 @@ $themeCss = basename($glob[0]);
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Groundhog Day Roundup—Feb. 2nd, <?= $year ?>—Canada &amp; United States</title>
+  <title>Groundhog Day Roundup—Feb. 2nd, <?=$year?>—Canada &amp; United States</title>
   <meta name="keywords" content="groundhog,day,shadow,roundup,canada,united,states,balzac,billie,wiarton,willie,shubenacadie,sam,staten,island,chuck,punxsutawney,phil,general,beauregard,lee">
   <meta name="description" content="A roundup of the <?=$year?> Groundhog Day results from across Canada and the United States.">
   <meta name="author" content="Thomas J Bradley">
   <meta name="copyright" content="Thomas J Bradley">
-  <link href="/theme/css/<?= $themeCss ?>" rel="stylesheet">
+  <link href="/theme/css/<?=$themeCss?>" rel="stylesheet">
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi">
@@ -33,14 +34,14 @@ $themeCss = basename($glob[0]);
 
 <h1 class="logo"><a href="/" class="logo-link"><img class="logo-img" src="/theme/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
 
-<p class="lede">Feb. 2nd, <?= $year ?></p>
+<p class="lede"><time datetime="<?=$year?>-02-02">Feb. 2nd, <?=$year?></time></p>
 
 <div class="gopher-group">
 <?php
   if ($country == 'ca') {
-    require_once 'theme/inc/ca.php';
+    require_once 'ca.html.php';
   } else {
-    require_once 'theme/inc/us.php';
+    require_once 'us.html.php';
   }
 ?>
 </div>
@@ -48,9 +49,9 @@ $themeCss = basename($glob[0]);
 <div class="gopher-group">
 <?php
   if ($country == 'ca') {
-    require_once 'theme/inc/us.php';
+    require_once 'us.html.php';
   } else {
-    require_once 'theme/inc/ca.php';
+    require_once 'ca.html.php';
   }
 ?>
 </div>
@@ -59,7 +60,7 @@ $themeCss = basename($glob[0]);
   Other Years:
   <ol class="other-years">
     <?php foreach ($other_years as $other_year) : ?>
-    <li><a href="/<?= $other_year ?>"><?= $other_year ?></a></li>
+    <li><a href="/<?=$other_year?>"><?=$other_year?></a></li>
     <?php endforeach; ?>
   </ol>
 </div>
