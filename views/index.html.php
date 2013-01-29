@@ -12,7 +12,7 @@ $gophers = json_decode(file_get_contents(__DIR__ . '/../gophers.json'));
 $gophers_data = getGopherList($year);
 $other_years = getAllYears();
 
-$glob = glob(__DIR__ . '/../theme/css/theme*.css');
+$glob = glob(__DIR__ . '/../css/groundhog-day-roundup*.css');
 $themeCss = basename($glob[0]);
 
 ?><!DOCTYPE html>
@@ -25,18 +25,18 @@ $themeCss = basename($glob[0]);
   <meta name="author" content="Thomas J Bradley">
   <meta name="copyright" content="Thomas J Bradley">
   <link rel="author" content="https://plus.google.com/112719250789350308611">
-  <link href="/theme/css/<?=$themeCss?>" rel="stylesheet">
+  <link href="/css/<?=$themeCss?>" rel="stylesheet">
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi">
-  <script src="/theme/js/modernizr.min.js"></script>
+  <script src="/js/modernizr.min.js"></script>
 </head>
 <body itemscope itemtype="http://schema.org/Event">
 
 <meta itemprop="name" content="Groundhog Day, <?=$year?>">
 <meta itempropproperty="description" content="A roundup of the <?=$year?> Groundhog Day results from across Canada and the United States.">
 
-<h1 class="logo"><a href="/" class="logo-link"><img class="logo-img" src="/theme/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
+<h1 class="logo"><a href="/" class="logo-link"><img class="logo-img" src="/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
 
 <p class="lede"><time itemprop="startDate" datetime="<?=$year?>-02-02">Feb. 2nd, <?=$year?></time></p>
 
@@ -74,7 +74,7 @@ $themeCss = basename($glob[0]);
 <script>
   Modernizr.load({
     test: Modernizr.inlinesvg
-    , nope: ['/theme/css/no-svg.css']
+    , nope: ['/css/no-svg.css']
   });
 
   if (Modernizr.cssanimations) {
