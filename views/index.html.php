@@ -8,8 +8,8 @@ $text = array(
 
 $country = getCountry();
 $year = getYear();
-$gophers = json_decode(file_get_contents(__DIR__ . '/../gophers.json'));
-$gophers_data = getGopherList($year);
+$gophers = getGophers();
+$gophers_data = getGopherData($year);
 $other_years = getAllYears();
 
 $glob = glob(__DIR__ . '/../css/groundhog-day-roundup*.css');

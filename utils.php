@@ -4,6 +4,7 @@ define('YEARS_DIR', __DIR__ . '/years');
 define('YEAR_FILE_EXT', '.json');
 define('YEAR_FILE', YEARS_DIR . '/%s' . YEAR_FILE_EXT);
 define('DEFAULT_GOPHER_LIST', YEARS_DIR . '/default.json');
+define('GOPHERS_PATH', __DIR__ . '/gophers.json');
 
 /**
  * Gets the current country: ca or us
@@ -48,10 +49,18 @@ function getAllYears () {
 }
 
 /**
+ * Gets the list of gophers and their name, location bits
+ * @return object
+ */
+function getGophers () {
+  return json_decode(file_get_contents(GOPHERS_PATH));
+}
+
+/**
  * Reads in the default gopher list construct
  * @return object
  */
-function createNewGopherList () {
+function createNewGopherData () {
   return json_decode(file_get_contents(DEFAULT_GOPHER_LIST));
 }
 
@@ -60,13 +69,13 @@ function createNewGopherList () {
  * @param string $year
  * @return object
  */
-function getGopherList ($year) {
+function getGopherData ($year) {
   $file = sprintf(YEAR_FILE, $year);
 
   if (file_exists($file)) {
     $gophers = json_decode(file_get_contents($file));
   } else {
-    $gophers = createNewGopherList();
+    $gophers = createNewGopherData();
   }
 
   return $gophers;
