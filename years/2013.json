@@ -1,9 +1,9 @@
 {
-  "billy" : "still-hibernating"
-  , "willie" : "still-hibernating"
-  , "sam" : "still-hibernating"
+  "billy" : "no-shadow"
+  , "willie" : "no-shadow"
+  , "sam" : "shadow"
 
-  , "chuck" : "still-hibernating"
-  , "phil" : "still-hibernating"
-  , "lee" : "still-hibernating"
+  , "chuck" : "no-shadow"
+  , "phil" : "no-shadow"
+  , "lee" : "shadow"
 }
