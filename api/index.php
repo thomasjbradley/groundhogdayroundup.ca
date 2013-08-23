@@ -9,7 +9,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] != 'GET') {
   header('HTTP/1.1 405 Method Not Allowed');
-  echo '{"error":"Gopher’s can’t be manipulated."}';
+  echo '{"error":"Gophers can’t be manipulated."}';
   exit;
 }
 
