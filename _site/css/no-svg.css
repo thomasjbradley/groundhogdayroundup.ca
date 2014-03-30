@@ -1,0 +1,12 @@
+.gopher-ground {
+  background-image: url("/theme/img/ground.png");
+}
+.gopher-shadow {
+  background-image: url("/theme/img/shadow.png");
+}
+.gopher-body {
+  background-image: url("/theme/img/body-no-shadow.png");
+}
+[data-state="shadow"] .gopher-body {
+  background-image: url("/theme/img/body-shadow.png");
+}

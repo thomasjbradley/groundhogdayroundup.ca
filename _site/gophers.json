@@ -1,0 +1,55 @@
+{
+  "ca": {
+    "billy": {
+      "name": "Balzac Billy"
+      , "adr": {
+          "locality": "Balzac"
+          , "region": "Alberta"
+        }
+      , "colour": "brown"
+    }
+    , "willie": {
+      "name": "Wiarton Willie"
+      , "adr": {
+          "locality": "Wiarton"
+          , "region": "Ontario"
+        }
+      , "colour": "white"
+    }
+    , "sam": {
+      "name": "Shubenacadie Sam"
+      , "adr": {
+          "locality": "Shubenacadie"
+          , "region": "Nova Scotia"
+        }
+      , "colour": "light"
+    }
+  }
+
+  , "us": {
+    "chuck": {
+      "name": "Staten Island Chuck"
+      , "adr": {
+          "locality": "Staten Island"
+          , "region": "New York"
+        }
+      , "colour": "light"
+    }
+    , "phil": {
+      "name": "Punxsutawney Phil"
+      , "adr": {
+          "locality": "Punxsutawney"
+          , "region": "Pennsylvania"
+        }
+      , "colour": "brown"
+    }
+    , "lee": {
+      "name": "General Beauregard Lee"
+      , "adr": {
+          "locality": "Lilburn"
+          , "region": "Georgia"
+        }
+      , "colour": "grey"
+    }
+  }
+}

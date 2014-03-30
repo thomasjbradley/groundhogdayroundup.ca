@@ -1,0 +1,73 @@
+@font-face{font-family:'LeagueGothic';src:url("/fonts/league-gothic.eot");src:url("/fonts/league-gothic.eot?#iefix") format('embedded-opentype'),url("/fonts/league-gothic.woff") format('woff'),url("/fonts/league-gothic.ttf") format('truetype'),url("/fonts/league-gothic.svg#LeagueGothicRegular") format('svg');font-weight:normal;font-style:normal}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{margin:0;padding:0;background:#5b554b url("/img/bg.jpg") no-repeat center top}
+body{margin:0 auto;min-width:240px;max-width:52em;padding:0 10px;color:#fff;font:normal 100.01%/1.375 sans-serif}
+img{margin:0;padding:0;border:0}
+a,a:link,a:visited{color:#fff}
+a:focus,a:active{outline:3px solid rgba(40,40,40,0.7)}
+h1{margin:.75em 0;color:#ebe8c5;font:normal 3em/1 "LeagueGothic",sans-serif;text-align:center}
+h2{margin:0 0 1em;padding:0;color:#ebe8c5;font:normal 3em/1 "LeagueGothic",sans-serif;text-align:center}
+h2 a,h2 a:link,h2 a:visited{color:#ebe8c5;text-decoration:none}
+h3{margin:0;padding:0;font-weight:normal;font-size:1.125em}
+p{margin:0;padding:0;color:#ccc;font:italic normal 1em Georgia,sans-serif}
+.logo{margin:.75em 0 .5em}
+.logo-link{display:block;margin:0 auto;max-width:500px;padding:2px 6px;width:100%;text-align:center}
+.logo-img{display:block;width:100%}
+.lede{margin:0 0 .75em;padding:0 0 .75em;border-bottom:1px solid #878176;color:#fff;font:normal 3em/1 "LeagueGothic",sans-serif;text-align:center}
+.gopher-group{clear:both;margin:2.3em auto;overflow:hidden;padding:0;position:relative;border-bottom:1px solid #878176}
+.gopher-list{margin:0 -10px;padding:0;list-style-type:none;text-align:center}
+.gopher{display:inline-block;margin:0 0 3em;min-width:220px;padding:200px 10px 4px;position:relative;text-align:center}
+.gopher:focus,.gopher:active{outline:none}
+.gopher:focus:after,.gopher:active:after{bottom:-1.2em;height:1em;left:50%;margin-left:-.5em;position:absolute;width:1em;content:"▲";color:rgba(40,40,40,0.7)}
+.gopher-icon{height:200px;left:50%;margin:0 0 0 -100px;overflow:hidden;position:absolute;top:0;width:200px}
+.gopher-ground,.gopher-shadow{height:82px;padding:0;position:absolute;top:120px;width:200px;background:transparent url("/img/ground.svg") no-repeat 0 0}
+.gopher-shadow{display:none;background-image:url("/img/shadow.svg")}
+[data-state="shadow"] .gopher-ground{background-position:-400px 0}
+[data-state="no-shadow"] .gopher-ground{background-position:-200px 0}
+[data-state="shadow"] .gopher-shadow{display:block;-webkit-transition:opacity 300ms ease-out;-moz-transition:opacity 300ms ease-out;-o-transition:opacity 300ms ease-out;-ms-transition:opacity 300ms ease-out;transition:opacity 300ms ease-out}
+.cssanimations .gopher-shadow{opacity:0;}
+.js-gopher-shadow-start .gopher-shadow{opacity:1;}
+.gopher-body{height:152px;overflow:hidden;position:absolute;width:800px;background:transparent url("/img/body-no-shadow.svg") no-repeat 0 130px;-webkit-transition:background-position 300ms ease-out;-moz-transition:background-position 300ms ease-out;-o-transition:background-position 300ms ease-out;-ms-transition:background-position 300ms ease-out;transition:background-position 300ms ease-out;text-indent:-999em}
+.gopher-white{left:-200px}
+.gopher-light{left:-400px}
+.gopher-grey{left:-600px}
+[data-state="shadow"] .gopher-body{background-image:url("/img/body-shadow.svg");background-position:0 0}
+[data-state="no-shadow"] .gopher-body{background-position:0 0}
+.gopher:hover .gopher-body,.gopher:focus .gopher-body,.gopher:active .gopher-body,.cssanimations [data-state="shadow"]:hover .gopher-body,.cssanimations [data-state="shadow"]:focus .gopher-body,.cssanimations [data-state="shadow"]:active .gopher-body{background-position:0 108px}
+.cssanimations .gopher:hover .gopher-shadow,.cssanimations .gopher:focus .gopher-shadow,.cssanimations .gopher:active .gopher-shadow{opacity:0;}
+[data-state="shadow"]:hover .gopher-body,[data-state="shadow"]:focus .gopher-body,[data-state="shadow"]:active .gopher-body{background-position:0 0}
+.cssanimations [data-state="no-shadow"] .gopher-body{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none}
+.js-gopher-animations .gopher-body{background-position:0 108px}
+.js-gopher-animations [data-state="shadow"] .gopher-body{-webkit-animation:gopher-popup 300ms 400ms 1 forwards;-moz-animation:gopher-popup 300ms 400ms 1 forwards;-o-animation:gopher-popup 300ms 400ms 1 forwards;-ms-animation:gopher-popup 300ms 400ms 1 forwards;animation:gopher-popup 300ms 400ms 1 forwards;-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none}
+.js-gopher-animations [data-state="no-shadow"] .gopher-body{-webkit-animation:gopher-popup 300ms 300ms 1 forwards;-moz-animation:gopher-popup 300ms 300ms 1 forwards;-o-animation:gopher-popup 300ms 300ms 1 forwards;-ms-animation:gopher-popup 300ms 300ms 1 forwards;animation:gopher-popup 300ms 300ms 1 forwards}
+[data-state="no-shadow"]:hover .gopher-body,[data-state="no-shadow"]:focus .gopher-body,[data-state="no-shadow"]:active .gopher-body{-webkit-animation:gopher-wave 300ms steps(3) 2;-moz-animation:gopher-wave 300ms steps(3) 2;-o-animation:gopher-wave 300ms steps(3) 2;-ms-animation:gopher-wave 300ms steps(3) 2;animation:gopher-wave 300ms steps(3) 2;background-position:0 0}
+.thomasjbradley,.thomasjbradley:link,.thomasjbradley:visited{display:block;height:31px;margin:-1.375em auto 1.375em;overflow:hidden;padding:0;width:17px;background:transparent url("/img/icons.png") no-repeat left top;text-indent:-999em}
+.thomasjbradley:hover,.thomasjbradley:focus,.thomasjbradley:active{background-position:right top}
+.other-years-wrap{padding-bottom:1.8em;color:#ccc;font:italic normal 1.25em Georgia,sans-serif;text-align:center}
+.other-years{display:inline;margin:0;padding:0;font-family:sans-serif;font-style:normal;list-style-type:none}
+.other-years li{display:inline;margin:0;padding:0}
+.other-years li:after{content:", "}
+.other-years li:last-child:after{content:""}
+.social{padding-bottom:2.6875em;font:normal 1.5 Geogria,sans-serif;text-align:center}
+.i-twitter{display:inline-block;height:32px;margin-right:.4em;position:relative;top:-.1em;vertical-align:middle;width:32px;background:transparent url("/img/icons.png") no-repeat left bottom}
+@-moz-keyframes gopher-wave{0%{background-position:0 -152px}
+100%{background-position:0 -608px}
+}@-webkit-keyframes gopher-wave{0%{background-position:0 -152px}
+100%{background-position:0 -608px}
+}@-o-keyframes gopher-wave{0%{background-position:0 -152px}
+100%{background-position:0 -608px}
+}@-ms-keyframes gopher-wave{0%{background-position:0 -152px}
+100%{background-position:0 -608px}
+}@keyframes gopher-wave{0%{background-position:0 -152px}
+100%{background-position:0 -608px}
+}@-moz-keyframes gopher-popup{0%{background-position:0 108px}
+100%{background-position:0 0}
+}@-webkit-keyframes gopher-popup{0%{background-position:0 108px}
+100%{background-position:0 0}
+}@-o-keyframes gopher-popup{0%{background-position:0 108px}
+100%{background-position:0 0}
+}@-ms-keyframes gopher-popup{0%{background-position:0 108px}
+100%{background-position:0 0}
+}@keyframes gopher-popup{0%{background-position:0 108px}
+100%{background-position:0 0}
+}
