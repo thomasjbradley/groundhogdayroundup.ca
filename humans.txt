@@ -15,4 +15,4 @@
   - ImageOptim
 
   Hosting:
-  - WiredTree <http://www.wiredtree.com/>
+  - GitHub <https://github.com/thomasjbradley/groundhogdayroundup.ca>
