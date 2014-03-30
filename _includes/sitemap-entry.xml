@@ -1,9 +1,14 @@
 <url>
-	<loc>https://groundhogdayroundup.ca{{include.entry.url}}</loc>
-	{% if include.entry.changefreq %}
-		<changefreq>{{include.entry.changefreq}}</changefreq>
-	{% endif %}
-	{% if include.entry.priority %}
-		<priority>{{include.entry.priority}}</priority>
-	{% endif %}
+  {% if include.entry.url == '/index.html' %}
+    {% assign url='/' %}
+  {% else %}
+    {% assign url=include.entry.url %}
+  {% endif %}
+  <loc>https://groundhogdayroundup.ca{{url}}</loc>
+  {% if include.entry.changefreq %}
+    <changefreq>{{include.entry.changefreq}}</changefreq>
+  {% endif %}
+  {% if include.entry.priority %}
+    <priority>{{include.entry.priority}}</priority>
+  {% endif %}
 </url>

@@ -1,3 +1,6 @@
+
+  
+
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -22,25 +25,71 @@
 
 <p class="lede"><time itemprop="startDate" datetime="2014-02-02">Feb. 2nd, 2014</time></p>
 
+
+  
+
+
 <div class="gopher-group">
   <h2>Canada</h2>
   <ul class="gopher-list">
-    <?php foreach ($gophers_list as $id => $gopher) : ?>
-<li class="gopher" data-state="<?=$gophers_data->{$id}?>" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
-  <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?=$gopher->name?></span></h3>
-  <meta itemprop="name" content="Groundhog Day, <?=$year?> in <?=$gopher->adr->locality?>, <?=$gopher->adr->region?>">
-  <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="addressLocality"><?=$gopher->adr->locality?></span>,
-    <span itemprop="addressRegion"><?=$gopher->adr->region?></span>
-    <meta itemprop="addressCountry" content="<?=$country?>">
-  </p>
-  <div class="gopher-icon">
-    <div class="gopher-body gopher-<?=$gopher->colour?>"><?=$text[$gophers_data->{$id}]?></div>
-    <div class="gopher-ground"></div>
-    <div class="gopher-shadow"></div>
-  </div>
-</li>
-<?php endforeach; ?>
+    
+  <li class="gopher" data-state="no-shadow" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+    <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Balzac Billy</span></h3>
+    <meta itemprop="name" content="Groundhog Day, 2014 in Balzac, Alberta">
+    <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Balzac</span>,
+      <span itemprop="addressRegion">Alberta</span>
+      <meta itemprop="addressCountry" content="Canada">
+    </p>
+    <div class="gopher-icon">
+      <div class="gopher-body gopher-brown">
+        
+            Didn’t see his shadow—spring’s on the way.
+          
+      </div>
+      <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
+    </div>
+  </li>
+
+  <li class="gopher" data-state="shadow" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+    <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Wiarton Willie</span></h3>
+    <meta itemprop="name" content="Groundhog Day, 2014 in Wiarton, Ontario">
+    <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Wiarton</span>,
+      <span itemprop="addressRegion">Ontario</span>
+      <meta itemprop="addressCountry" content="Canada">
+    </p>
+    <div class="gopher-icon">
+      <div class="gopher-body gopher-white">
+        
+            Saw his shadow—more winter is coming.
+          
+      </div>
+      <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
+    </div>
+  </li>
+
+  <li class="gopher" data-state="no-shadow" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+    <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Shubenacadie Sam</span></h3>
+    <meta itemprop="name" content="Groundhog Day, 2014 in Shubenacadie, Nova Scotia">
+    <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Shubenacadie</span>,
+      <span itemprop="addressRegion">Nova Scotia</span>
+      <meta itemprop="addressCountry" content="Canada">
+    </p>
+    <div class="gopher-icon">
+      <div class="gopher-body gopher-light">
+        
+            Didn’t see his shadow—spring’s on the way.
+          
+      </div>
+      <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
+    </div>
+  </li>
+
 
   </ul>
 </div>
@@ -48,22 +97,64 @@
 <div class="gopher-group">
   <h2>United States</h2>
   <ul class="gopher-list">
-    <?php foreach ($gophers_list as $id => $gopher) : ?>
-<li class="gopher" data-state="<?=$gophers_data->{$id}?>" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
-  <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?=$gopher->name?></span></h3>
-  <meta itemprop="name" content="Groundhog Day, <?=$year?> in <?=$gopher->adr->locality?>, <?=$gopher->adr->region?>">
-  <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="addressLocality"><?=$gopher->adr->locality?></span>,
-    <span itemprop="addressRegion"><?=$gopher->adr->region?></span>
-    <meta itemprop="addressCountry" content="<?=$country?>">
-  </p>
-  <div class="gopher-icon">
-    <div class="gopher-body gopher-<?=$gopher->colour?>"><?=$text[$gophers_data->{$id}]?></div>
-    <div class="gopher-ground"></div>
-    <div class="gopher-shadow"></div>
-  </div>
-</li>
-<?php endforeach; ?>
+    
+  <li class="gopher" data-state="shadow" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+    <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Staten Island Chuck</span></h3>
+    <meta itemprop="name" content="Groundhog Day, 2014 in Staten Island, New York">
+    <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Staten Island</span>,
+      <span itemprop="addressRegion">New York</span>
+      <meta itemprop="addressCountry" content="United States">
+    </p>
+    <div class="gopher-icon">
+      <div class="gopher-body gopher-light">
+        
+            Saw his shadow—more winter is coming.
+          
+      </div>
+      <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
+    </div>
+  </li>
+
+  <li class="gopher" data-state="shadow" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+    <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Punxsutawney Phil</span></h3>
+    <meta itemprop="name" content="Groundhog Day, 2014 in Punxsutawney, Pennsylvania">
+    <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Punxsutawney</span>,
+      <span itemprop="addressRegion">Pennsylvania</span>
+      <meta itemprop="addressCountry" content="United States">
+    </p>
+    <div class="gopher-icon">
+      <div class="gopher-body gopher-brown">
+        
+            Saw his shadow—more winter is coming.
+          
+      </div>
+      <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
+    </div>
+  </li>
+
+  <li class="gopher" data-state="no-shadow" tabindex="0" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+    <h3 class="gopher-name" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">General Beauregard Lee</span></h3>
+    <meta itemprop="name" content="Groundhog Day, 2014 in Lilburn, Georgia">
+    <p class="gopher-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Lilburn</span>,
+      <span itemprop="addressRegion">Georgia</span>
+      <meta itemprop="addressCountry" content="United States">
+    </p>
+    <div class="gopher-icon">
+      <div class="gopher-body gopher-grey">
+        
+            Didn’t see his shadow—spring’s on the way.
+          
+      </div>
+      <div class="gopher-ground"></div>
+      <div class="gopher-shadow"></div>
+    </div>
+  </li>
+
 
   </ul>
 </div>

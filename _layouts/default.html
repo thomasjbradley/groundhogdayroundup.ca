@@ -1,9 +1,14 @@
+{% if page.date %}
+  {% capture year %}{{page.date | date: "%Y"}}{% endcapture %}
+{% else %}
+  {% capture year %}{{site.time | date: "%Y"}}{% endcapture %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Groundhog Day Roundup—Feb. 2nd, {{site.time | date: "%Y"}}—Canada &amp; United States</title>
-  <meta name="description" content="A roundup of the {{site.time | date: "%Y"}} Groundhog Day results from across Canada and the United States.">
+  <title>Groundhog Day Roundup—Feb. 2nd, {{year}}—Canada &amp; United States</title>
+  <meta name="description" content="A roundup of the {{year}} Groundhog Day results from across Canada and the United States.">
   <meta name="author" content="Thomas J Bradley">
   <meta name="copyright" content="Thomas J Bradley">
   <link rel="author" content="https://plus.google.com/112719250789350308611">
@@ -15,15 +20,21 @@
 </head>
 <body itemscope itemtype="http://schema.org/Event">
 
-<meta itemprop="name" content="Groundhog Day, {{site.time | date: "%Y"}}">
-<meta itempropproperty="description" content="A roundup of the {{site.time | date: "%Y"}} Groundhog Day results from across Canada and the United States.">
+<meta itemprop="name" content="Groundhog Day, {{year}}">
+<meta itempropproperty="description" content="A roundup of the {{year}} Groundhog Day results from across Canada and the United States.">
 
 <h1 class="logo"><a href="/" class="logo-link"><img class="logo-img" src="/img/logo.svg" alt="Groundhog Day Roundup"></a></h1>
 
-<p class="lede"><time itemprop="startDate" datetime="{{site.time | date: "%Y"}}-02-02">Feb. 2nd, {{site.time | date: "%Y"}}</time></p>
+<p class="lede"><time itemprop="startDate" datetime="{{year}}-02-02">Feb. 2nd, {{year}}</time></p>
 
-{% include gopher-group.html country="Canada" %}
-{% include gopher-group.html country="United States" %}
+{% if page.url == '/index.html' %}
+  {% assign gophers=site.posts[0] %}
+{% else %}
+  {% assign gophers=page %}
+{% endif %}
+
+{% include gopher-group.html country="Canada" country_short="ca" year=year gophers=gophers %}
+{% include gopher-group.html country="United States" country_short="us" year=year gophers=gophers %}
 
 <div class="other-years-wrap">
   Other Years:
