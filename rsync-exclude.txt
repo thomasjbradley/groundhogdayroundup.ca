@@ -1,6 +1,0 @@
-._*
-.DS_Store
-.git*
-rsync-exclude.txt
-deploy.sh
-*.styl
