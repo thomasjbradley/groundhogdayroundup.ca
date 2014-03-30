@@ -1,4 +1,4 @@
-# groundhogdayroundup.ca
+# Groundhog Day Roundup
 
 Groundhog Day is the most important day of the year!
 
@@ -10,6 +10,6 @@ Groundhog Day Roundup has an API! Check it out:
 
 	http://groundhogdayroundup.ca/api/
 
-## Author
+---
 
-Lovingly handcrafted by [Thomas J Bradley](http://thomasjbradley.ca), a professor and developer of The Open Web.
+© 2014 Thomas J Bradley
