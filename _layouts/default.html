@@ -28,9 +28,9 @@
 <div class="other-years-wrap">
   Other Years:
   <ol class="other-years">
-    <?php foreach ($other_years as $other_year) : ?>
-    <li><a href="/<?=$other_year?>"><?=$other_year?></a></li>
-    <?php endforeach; ?>
+    {% for post in site.posts %}
+      <li><a href="/{{post.date | date:'%Y'}}">{{post.date | date:'%Y'}}</a></li>
+    {% endfor %}
   </ol>
 </div>
 
