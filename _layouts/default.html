@@ -27,7 +27,7 @@
 
 <p class="lede"><time itemprop="startDate" datetime="{{year}}-02-02">Feb. 2nd, {{year}}</time></p>
 
-{% if page.url == '/index.html' %}
+{% if page.url == '/' %}
   {% assign gophers=site.posts[0] %}
 {% else %}
   {% assign gophers=page %}
