@@ -2,7 +2,7 @@
 
 Groundhog Day is the most important day of the year!
 
-[This website celebrates my love of Groundhog Day.](https://groundhogdayroundup.ca)
+[This website celebrates my love of Groundhog Day.](http://groundhogdayroundup.ca)
 
 ---
 

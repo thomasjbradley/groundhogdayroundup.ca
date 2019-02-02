@@ -4,7 +4,7 @@
   {% else %}
     {% assign url=include.entry.url %}
   {% endif %}
-  <loc>https://groundhogdayroundup.ca{{url}}</loc>
+  <loc>http://groundhogdayroundup.ca{{url}}</loc>
   {% if include.entry.changefreq %}
     <changefreq>{{include.entry.changefreq}}</changefreq>
   {% endif %}

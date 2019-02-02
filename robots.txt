@@ -1,6 +1,6 @@
 # robotstxt.org
 
-Sitemap: https://groundhogdayroundup.ca/sitemap.xml
+Sitemap: http://groundhogdayroundup.ca/sitemap.xml
 
 User-Agent: *
 Disallow:
