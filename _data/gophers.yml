@@ -44,9 +44,9 @@ us:
   - id: lee
     name: "General Beauregard Lee"
     adr:
-      locality: "Lilburn"
+      locality: "Jackson"
       region: "Georgia"
-      street: "Yellow River Game Ranch, Yellow Pine Dr SW"
+      street: "Dauset Trails"
     colour: "grey"
-    url: "http://www.yellowrivergameranch.com/bio.htm"
+    url: "https://www.facebook.com/General-Beauregard-Lee-234466143303677/"
 ---
